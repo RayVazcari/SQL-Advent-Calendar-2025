@@ -19,4 +19,4 @@ SELECT *FROM reindeer_run_results
 SELECT name, rank
 FROM reindeer_run_results
 ORDER BY rank
-LIMIT 7;
+LIMIT 7

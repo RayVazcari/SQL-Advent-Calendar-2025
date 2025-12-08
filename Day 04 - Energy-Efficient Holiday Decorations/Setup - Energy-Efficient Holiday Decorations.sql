@@ -1,9 +1,9 @@
--- Day 3 of SQL Advent Calendar 2025 by Interview Master
--- The Grinch's Best Pranks Per Target
+-- Day 4 of SQL Advent Calendar 2025 by Interview Master
+-- Energy-Efficient Holiday Decorations
 
 -- -- Question 1 of 1
 
--- The Grinch has brainstormed a ton of pranks for Whoville, but he only wants to keep the top prank per target, with the highest evilness score. Return the most evil prank for each target. If two pranks have the same evilness, the more recently brainstormed wins.
+-- Kevin's trying to decorate the house without sending the electricity bill through the roof. Write a query to find the top 5 most energy-efficient decorations (i.e. lowest cost per hour to operate).
 
 
 --/////////////////////////////////////////////////////////////////////////////
@@ -20,20 +20,18 @@ GO
 ----------------------------------------------------
 -- 1. Drop existing tables if they exist (idempotent)
 ----------------------------------------------------
-IF OBJECT_ID('grinch_prank_ideas', 'U') IS NOT NULL
-    DROP TABLE dbo.grinch_prank_ideas;
+IF OBJECT_ID('hall_decorations', 'U') IS NOT NULL
+    DROP TABLE dbo.hall_decorations;
 GO
 
 ------------------------------
 -- 2. Create the tables
 ------------------------------
-CREATE TABLE dbo.grinch_prank_ideas
+CREATE TABLE dbo.hall_decorations
 (
-    prank_id INT,
-    target_name VARCHAR(100),
-    prank_description VARCHAR(500),
-    evilness_score INT,
-    created_at DATETIME
+    decoration_id INT,
+    decoration_name VARCHAR(100),
+    energy_cost_per_hour DECIMAL(5,4)
 );
 GO
 
@@ -42,8 +40,8 @@ GO
 --    (CSVs must be in a folder SQL Server can read)
 -- Note, how your files are separated depends on your file. I was incorrectly using commas, and upon further review, I found that the CSVs were actually tab-separated)
 -----------------------------------------
-BULK INSERT dbo.grinch_prank_ideas
-FROM 'C:\Users\ramon\OneDrive\04 - Education\SQL Advent Calendar\Day 03 - The Grinchs Best Pranks Per Target\grinch_prank_ideas.csv'
+BULK INSERT dbo.hall_decorations
+FROM 'C:\Users\jovazqu\OneDrive\04 - Education\SQL Advent Calendar\Day 04 - Energy-Efficient Holiday Decorations\hall_decorations.csv'
 WITH (
     FIRSTROW = 2,           -- skip header
     FIELDTERMINATOR = '\t',  -- comma-separated now
@@ -55,5 +53,5 @@ GO
 -- 4. Sanity checks
 -----------------------------------------
 SELECT COUNT(*) AS row_count
-FROM dbo.grinch_prank_ideas;
+FROM dbo.hall_decorations;
 GO

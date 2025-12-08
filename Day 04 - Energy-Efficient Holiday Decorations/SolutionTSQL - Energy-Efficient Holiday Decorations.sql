@@ -1,56 +1,25 @@
--- Day 3 of SQL Advent Calendar 2025 by Interview Master
--- The Grinch's Best Pranks Per Target
+-- Day 4 of SQL Advent Calendar 2025 by Interview Master
+-- Energy-Efficient Holiday Decorations
 
 -- -- Question 1 of 1
 
--- The Grinch has brainstormed a ton of pranks for Whoville, but he only wants to keep the top prank per target, with the highest evilness score. Return the most evil prank for each target. If two pranks have the same evilness, the more recently brainstormed wins.
+-- Kevin's trying to decorate the house without sending the electricity bill through the roof. Write a query to find the top 5 most energy-efficient decorations (i.e. lowest cost per hour to operate).
 
 
 --/////////////////////////////////////////////////////////////////////////////
+
 
 -- Select the database to use for the script. In this case, it's SQLAdvent2025.
 USE SQLAdvent2025;
 GO
 
 -- Show that the table exists
-SELECT *FROM grinch_prank_ideas
+SELECT *FROM hall_decorations
 GO
 
 
--- Select the Pranks per target and evilness.
-SELECT
-    prank_id,
-    target_name,
-    prank_description,
-    evilness_score,
-    created_at,
-    ROW_NUMBER() OVER (
-        PARTITION BY target_name
-        ORDER BY evilness_score DESC, created_at DESC
-    ) AS rn
-FROM grinch_prank_ideas;
-GO
-
--- Using a windows function to rank the pranks per target, select only the top prank per target.
-SELECT
-    prank_id,
-    target_name,
-    prank_description,
-    evilness_score,
-    created_at
-FROM (
-    SELECT
-        prank_id,
-        target_name,
-        prank_description,
-        evilness_score,
-        created_at,
-        ROW_NUMBER() OVER (
-        PARTITION BY target_name
-        ORDER BY evilness_score DESC, created_at DESC
-    ) AS rn
-    FROM grinch_prank_ideas
-) AS ranked
-WHERE rn = 1
-ORDER BY target_name
+-- Select the top 5 based on the energy cost.
+SELECT TOP 5 decoration_id, decoration_name, energy_cost_per_hour
+FROM hall_decorations
+ORDER BY energy_cost_per_hour;
 GO
