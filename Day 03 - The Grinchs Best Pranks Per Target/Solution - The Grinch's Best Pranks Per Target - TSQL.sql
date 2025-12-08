@@ -13,13 +13,44 @@ USE SQLAdvent2025;
 GO
 
 -- Show that the table exists
-SELECT *
-FROM dbo.toy_production
-SELECT *
-FROM dbo.toy_delivery
+SELECT *FROM grinch_prank_ideas
+GO
 
--- Select the columns to use for the script.
-SELECT p.toy_id, p.toy_name
-FROM dbo.toy_production AS p
-    JOIN dbo.toy_delivery AS d
-    ON p.toy_id = d.toy_id;
+
+-- Select the Pranks per target and evilness.
+SELECT
+    prank_id,
+    target_name,
+    prank_description,
+    evilness_score,
+    created_at,
+    ROW_NUMBER() OVER (
+        PARTITION BY target_name
+        ORDER BY evilness_score DESC, created_at DESC
+    ) AS rn
+FROM grinch_prank_ideas;
+GO
+
+-- Using a windows function to rank the pranks per target, select only the top prank per target.
+SELECT
+    prank_id,
+    target_name,
+    prank_description,
+    evilness_score,
+    created_at
+FROM (
+    SELECT
+        prank_id,
+        target_name,
+        prank_description,
+        evilness_score,
+        created_at,
+        ROW_NUMBER() OVER (
+        PARTITION BY target_name
+        ORDER BY evilness_score DESC, created_at DESC
+    ) AS rn
+    FROM grinch_prank_ideas
+) AS ranked
+WHERE rn = 1
+ORDER BY target_name
+GO
