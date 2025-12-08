@@ -13,8 +13,10 @@ USE SQLAdvent2025;
 GO
 
 -- Show that the table exists
-SELECT * FROM dbo.toy_production
-SELECT * FROM dbo.toy_delivery
+SELECT * 
+FROM dbo.toy_production
+SELECT * 
+FROM dbo.toy_delivery
 
 -- Select the columns to use for the script.
 SELECT p.toy_id, p.toy_name
