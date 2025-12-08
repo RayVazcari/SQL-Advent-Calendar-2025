@@ -1,0 +1,22 @@
+<!-- To use GIT: -->
+
+git init
+git remote add origin https://github.com/RayVazcari/SQL-Advent-Calendar-2025.git
+
+<!-- Initial commit -->
+
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git push -u origin main
+
+<!-- If there’s a README conflict, keep whichever you like, then: -->
+
+git add .
+git commit -m "Merge remote main into local"
+
+<!-- Loop for Git updates -->
+
+git add .
+git commit -m "Your message"
+git push
