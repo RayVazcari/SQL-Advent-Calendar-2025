@@ -1,0 +1,63 @@
+-- Day 6 of SQL Advent Calendar by Interview Master
+-- Ski Resort Snowfall Rankings
+
+-- Question 1 of 1
+
+-- Buddy is planning a winter getaway and wants to rank ski resorts by annual snowfall. Can you help him bucket these ski resorts into quartiles?
+
+-- ===============================================================
+
+-- SQL script to create a table and load data from a CSV file
+-- 👇 Change the name of the database to match your own
+-- If you don't have a database called SQLAdvent2025, run this line
+-- CREATE DATABASE SQLAdvent2025;
+-- Then run this line to use it and reuse the connection for the future
+
+USE SQLAdvent2025;
+GO
+
+----------------------------------------------------
+-- 1. Drop existing tables if they exist (idempotent)
+----------------------------------------------------
+
+IF OBJECT_ID('dbo.resort_monthly_snowfall', 'U') IS NOT NULL
+    DROP TABLE dbo.resort_monthly_snowfall;
+GO
+
+------------------------------
+-- 2. Create the tables
+------------------------------
+
+CREATE TABLE dbo.resort_monthly_snowfall (
+    resort_id INT, 
+    resort_name VARCHAR(100), 
+    snow_month INT, 
+    snowfall_inches DECIMAL(5,2)
+);
+GO
+
+-----------------------------------------
+-- 3. Load data from CSVs using BULK INSERT (CSVs must be in a folder SQL Server can read)
+-- Note, how your files are separated depends on your file. I was incorrectly using commas, and upon further review, I found that the CSVs were actually tab-separated). A colleague pointed out that there are such things as 'tab-sepparated values' files, or TSVs. So I will be saving those files as .tsv going forward to avoid confusion.
+-----------------------------------------
+
+BULK INSERT dbo.resort_monthly_snowfall
+FROM 'C:\Users\jovazqu\OneDrive\04 - Education\SQL Advent Calendar\Day 06 - Ski Resort Snowfall Rankings\resort_monthly_snowfall.tsv'
+WITH (
+    FIRSTROW = 2,           -- skip header
+    FIELDTERMINATOR = '\t',  -- tab-separated
+    ROWTERMINATOR = '0x0a'  -- line break
+)
+GO
+
+-----------------------------------------
+-- 4. Sanity checks
+-----------------------------------------
+
+SELECT COUNT(*) AS row_count
+FROM dbo.resort_monthly_snowfall;
+GO
+
+SELECT TOP 10 *
+FROM dbo.resort_monthly_snowfall;
+GO

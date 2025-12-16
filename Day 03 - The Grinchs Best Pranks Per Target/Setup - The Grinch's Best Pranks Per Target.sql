@@ -46,7 +46,7 @@ BULK INSERT dbo.grinch_prank_ideas
 FROM 'C:\Users\ramon\OneDrive\04 - Education\SQL Advent Calendar\Day 03 - The Grinchs Best Pranks Per Target\grinch_prank_ideas.csv'
 WITH (
     FIRSTROW = 2,           -- skip header
-    FIELDTERMINATOR = '\t',  -- comma-separated now
+    FIELDTERMINATOR = '\t',  -- tab-separated now
     ROWTERMINATOR = '0x0a'  -- line break
 );
 GO

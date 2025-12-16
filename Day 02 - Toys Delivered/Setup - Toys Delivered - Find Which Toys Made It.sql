@@ -52,13 +52,13 @@ GO
 -----------------------------------------
 -- 3. Load data from CSVs using BULK INSERT
 --    (CSVs must be in a folder SQL Server can read)
--- Note, how your files are sepparated depends on your file. I was incorrectly using commas, and upon further review, I found that the CSVs were actually tab-separated)
+-- Note, how your files are separated depends on your file. I was incorrectly using commas, and upon further review, I found that the CSVs were actually tab-separated)
 -----------------------------------------
 BULK INSERT dbo.toy_production
 FROM 'C:\Users\ramon\OneDrive\04 - Education\SQL Advent Calendar\Day 02 - Toys Delivered\toy_production.csv'
 WITH (
     FIRSTROW = 2,               -- skip header row
-    FIELDTERMINATOR = '\t',      -- comma-separated
+    FIELDTERMINATOR = '\t',      -- tab-separated
     ROWTERMINATOR = '0x0a'      -- line break
 );
 GO
@@ -67,7 +67,7 @@ BULK INSERT dbo.toy_delivery
 FROM 'C:\Users\ramon\OneDrive\04 - Education\SQL Advent Calendar\Day 02 - Toys Delivered\toy_delivery.csv'
 WITH (
     FIRSTROW = 2,               -- skip header row
-    FIELDTERMINATOR = '\t',      -- comma-separated
+    FIELDTERMINATOR = '\t',      -- tab-separated
     ROWTERMINATOR = '0x0a'      -- line break
 );
 GO

@@ -42,7 +42,7 @@ CREATE TABLE dbo.vacations
 (
     elf_id INT,
     start_name DATE,
-    return_name DATE,
+    return_date DATE,
 );
 GO
 
@@ -55,7 +55,7 @@ BULK INSERT dbo.elves
 FROM 'C:\Users\jovazqu\OneDrive\04 - Education\SQL Advent Calendar\Day 05 - Elf Vacation Status\elves.csv'
 WITH (
     FIRSTROW = 2,           -- skip header
-    FIELDTERMINATOR = '\t',  -- comma-separated now
+    FIELDTERMINATOR = '\t',  -- tab-separated now
     ROWTERMINATOR = '0x0a'  -- line break
 );
 GO
@@ -64,7 +64,7 @@ BULK INSERT dbo.vacations
 FROM 'C:\Users\jovazqu\OneDrive\04 - Education\SQL Advent Calendar\Day 05 - Elf Vacation Status\vacations.csv'
 WITH (
     FIRSTROW = 2,           -- skip header
-    FIELDTERMINATOR = '\t',  -- comma-separated now
+    FIELDTERMINATOR = '\t',  -- tab-separated now
     ROWTERMINATOR = '0x0a'  -- line break
 );
 GO

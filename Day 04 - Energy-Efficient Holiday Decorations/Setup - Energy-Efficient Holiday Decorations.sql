@@ -44,7 +44,7 @@ BULK INSERT dbo.hall_decorations
 FROM 'C:\Users\jovazqu\OneDrive\04 - Education\SQL Advent Calendar\Day 04 - Energy-Efficient Holiday Decorations\hall_decorations.csv'
 WITH (
     FIRSTROW = 2,           -- skip header
-    FIELDTERMINATOR = '\t',  -- comma-separated now
+    FIELDTERMINATOR = '\t',  -- tab-separated now
     ROWTERMINATOR = '0x0a'  -- line break
 );
 GO
