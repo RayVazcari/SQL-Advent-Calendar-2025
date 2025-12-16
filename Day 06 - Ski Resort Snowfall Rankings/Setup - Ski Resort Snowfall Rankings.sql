@@ -17,7 +17,7 @@ USE SQLAdvent2025;
 GO
 
 ----------------------------------------------------
--- 1. Drop existing tables if they exist (idempotent)
+-- 1. Drop existing tables if they exist
 ----------------------------------------------------
 
 IF OBJECT_ID('dbo.resort_monthly_snowfall', 'U') IS NOT NULL

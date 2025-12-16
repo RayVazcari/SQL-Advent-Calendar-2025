@@ -46,6 +46,10 @@ GO
 
 --  Now that we have this. We can start thinking about how we're gonna be bucketing or grouping. And categorizing. The resort's annual snowfall. Into quartiles. We needed a window function, That is meant to split order rows into N number of groups as evenly as possible. SQL already has a window function like this called NTILE. NTILE takes a single argument, which is the number of groups you want to create. In this case, we want to create four groups or quartiles. So we will pass in the number 4 as the argument to NTILE and order the results by the annual snowfall in descending order.
 
+-----------------------------------------
+-- 4. Final solution
+-----------------------------------------
+
 SELECT 
     resort_name,
     SUM (snowfall_inches) AS annual_snowfall,
