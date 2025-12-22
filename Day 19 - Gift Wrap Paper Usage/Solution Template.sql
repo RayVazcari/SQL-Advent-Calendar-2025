@@ -1,9 +1,9 @@
--- Day 7 of SQL Advent Calendar by Interview Master
--- Snowflake Types Count
+-- Day 19 of SQL Advent Calendar by Interview Master
+-- Gift Wrap Paper Usage
 
 -- Question 1 of 1
 
--- Frosty wants to know how many unique snowflake types were recorded on the December 24th, 2025 storm. Can you help him?
+-- Clara is reviewing holiday orders to uncover hidden patterns — can you return the total amount of wrapping paper used for orders that were both gift-wrapped and successfully delivered?
 
 
 -- ===============================================================

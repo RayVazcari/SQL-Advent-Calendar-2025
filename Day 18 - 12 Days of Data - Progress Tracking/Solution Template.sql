@@ -1,9 +1,9 @@
--- Day 7 of SQL Advent Calendar by Interview Master
--- Snowflake Types Count
+-- Day 18 of SQL Advent Calendar by Interview Master
+-- 12 Days of Data - Progress Tracking
 
 -- Question 1 of 1
 
--- Frosty wants to know how many unique snowflake types were recorded on the December 24th, 2025 storm. Can you help him?
+-- Over the 12 days of her data challenge, Data Dawn tracked her daily quiz scores across different subjects. Can you find each subject's first and last recorded score to see how much she improved?
 
 
 -- ===============================================================

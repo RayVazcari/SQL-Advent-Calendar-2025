@@ -52,7 +52,7 @@ GO
 -----------------------------------------
 
 BULK INSERT dbo.storage_lights 
-FROM 'C:\Users\jovazqu\OneDrive\04 - Education\SQL Advent Calendar\Day 8 - Storage Room Inventory\storage_lights.tsv'
+FROM 'C:\Users\jovazqu\OneDrive\04 - Education\SQL Advent Calendar\Day 08 - Storage Room Inventory\storage_lights.tsv'
 WITH (
     FIRSTROW = 2,           -- skip header
     FIELDTERMINATOR = '\t',  -- tab-separated now
@@ -61,7 +61,7 @@ WITH (
 GO
 
 BULK INSERT dbo.storage_trees
-FROM 'C:\Users\jovazqu\OneDrive\04 - Education\SQL Advent Calendar\Day 8 - Storage Room Inventory\storage_trees.tsv'
+FROM 'C:\Users\jovazqu\OneDrive\04 - Education\SQL Advent Calendar\Day 08 - Storage Room Inventory\storage_trees.tsv'
 WITH (
     FIRSTROW = 2,           -- skip header
     FIELDTERMINATOR = '\t',  -- tab-separated now

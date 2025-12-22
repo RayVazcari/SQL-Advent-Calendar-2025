@@ -1,9 +1,9 @@
--- Day#7 of SQL Advent Calendar by Interview Master
--- TITLE
+-- Day 17 of SQL Advent Calendar by Interview Master
+-- Evening Task Categories
 
 -- Question 1 of 1
 
--- 
+-- During a quiet evening of reflection, Cindy Lou wants to categorize her tasks based on how peaceful they are. Can you write a query that adds a new column classifying each task as 'Calm' if its noise_level is below 50, and 'Chaotic' otherwise?
 
 
 -- ===============================================================

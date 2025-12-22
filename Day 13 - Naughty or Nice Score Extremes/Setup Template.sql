@@ -1,12 +1,15 @@
--- Day#7 of SQL Advent Calendar by Interview Master
--- TITLE
+-- Day 13 of SQL Advent Calendar by Interview Master
+-- Naughty or Nice Score Extremes
+
+-- Santa's audit team is reviewing this year's behavior scores to find the extremes — write a query to return the lowest and highest scores recorded on the Naughty or Nice list.
 
 -- Question 1 of 1
 
--- 
+-- Santa's audit team is reviewing this year's behavior scores to find the extremes — write a query to return the lowest and highest scores recorded on the Naughty or Nice list.
 
 
 -- ===============================================================
+
 
 -- SQL script to create a table and load data from a txt file
 -- 👇 Change the name of the database to match your own

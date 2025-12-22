@@ -1,9 +1,9 @@
--- Day 7 of SQL Advent Calendar by Interview Master
--- Snowflake Types Count
+-- Day 21 of SQL Advent Calendar by Interview Master
+-- Fireside Story Running Total
 
 -- Question 1 of 1
 
--- Frosty wants to know how many unique snowflake types were recorded on the December 24th, 2025 storm. Can you help him?
+-- The Snow Queen hosts nightly fireside chats and records how many stories she tells each evening. Can you calculate the running total of stories she has shared over time, in the order they were told?
 
 
 -- ===============================================================

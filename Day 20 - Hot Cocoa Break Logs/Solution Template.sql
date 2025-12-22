@@ -1,9 +1,9 @@
--- Day 7 of SQL Advent Calendar by Interview Master
--- Snowflake Types Count
+-- Day 20 of SQL Advent Calendar by Interview Master
+-- Hot Cocoa Break Logs
 
 -- Question 1 of 1
 
--- Frosty wants to know how many unique snowflake types were recorded on the December 24th, 2025 storm. Can you help him?
+-- Jack Frost wants to review all the cocoa breaks he actually took — including the cocoa type and the location he drank it in. How would you combine the necessary tables to show each logged break with its matching cocoa details and location?
 
 
 -- ===============================================================

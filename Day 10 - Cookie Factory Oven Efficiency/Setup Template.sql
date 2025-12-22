@@ -1,9 +1,11 @@
--- Day#7 of SQL Advent Calendar by Interview Master
--- TITLE
+-- Day 10 of SQL Advent Calendar by Interview Master
+-- Cookie Factory Oven Efficiency
+
+-- In the holiday cookie factory, workers are measuring how efficient each oven is. Can you find the average baking time per oven rounded to one decimal place?
 
 -- Question 1 of 1
 
--- 
+-- In the holiday cookie factory, workers are measuring how efficient each oven is. Can you find the average baking time per oven rounded to one decimal place?
 
 
 -- ===============================================================

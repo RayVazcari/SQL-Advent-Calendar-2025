@@ -1,0 +1,31 @@
+task_id	task_name	task_type	priority
+1	Review sales reports	Office	High
+2	Answer emails	Work From Home	Medium
+3	Attend team meeting	Office	High
+4	Update project documentation	Work From Home	Low
+5	Code review	Work From Home	High
+6	File expense reports	Office	Low
+7	Organize desk	Office	Low
+8	Client presentation	Office	High
+9	Write blog post	Work From Home	Medium
+10	Schedule appointments	Work From Home	Low
+11	Print materials	Office	Medium
+12	Research competitor products	Work From Home	Low
+13	Update spreadsheets	Work From Home	Medium
+14	Water office plants	Office	Low
+15	Backup files	Work From Home	Low
+16	Network at conference	Office	High
+17	Read industry news	Work From Home	Low
+18	Submit timesheets	Office	Medium
+19	Test new software	Work From Home	Medium
+20	Order supplies	Office	Low
+21	Join webinar	Work From Home	Low
+22	Sign contracts	Office	High
+23	Update calendar	Work From Home	Low
+24	Prepare quarterly report	Office	High
+25	Clean email inbox	Work From Home	Low
+26	Train new employee	Office	High
+27	Watch training videos	Work From Home	Low
+28	Proofread documents	Work From Home	Medium
+29	Ship packages	Office	Medium
+30	Browse project ideas	Work From Home	Low

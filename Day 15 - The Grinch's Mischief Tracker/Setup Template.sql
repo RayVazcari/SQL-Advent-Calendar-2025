@@ -1,9 +1,9 @@
--- Day#7 of SQL Advent Calendar by Interview Master
--- TITLE
+-- Day 15 of SQL Advent Calendar by Interview Master
+-- The Grinch's Mischief Tracker
 
 -- Question 1 of 1
 
--- 
+-- The Grinch is tracking his daily mischief scores to see how his behavior changes over time. Can you find how many points his score increased or decreased each day compared to the previous day?
 
 
 -- ===============================================================
