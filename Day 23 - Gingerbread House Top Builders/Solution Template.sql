@@ -1,9 +1,9 @@
--- Day 7 of SQL Advent Calendar by Interview Master
--- Snowflake Types Count
+-- Day 23 of SQL Advent Calendar by Interview Master
+-- Gingerbread House Top Builders
 
 -- Question 1 of 1
 
--- Frosty wants to know how many unique snowflake types were recorded on the December 24th, 2025 storm. Can you help him?
+-- The Gingerbread House Competition wants to feature the builders who used at least 4 distinct candy types in their designs. How would you identify these builders?
 
 
 -- ===============================================================
